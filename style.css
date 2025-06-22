@@ -1,0 +1,113 @@
+:root {
+  --bg: #161722;
+  --fg: #25273c;
+  --text: #cacde8;
+  --text-muted: #777a92;
+  --accent: #3a7bfd;
+  --complete: #4d5066;
+}
+
+[data-theme="light"] {
+  --bg: #fafafa;
+  --fg: #ffffff;
+  --text: #494c6b;
+  --text-muted: #d1d2da;
+  --accent: #3a7bfd;
+  --complete: #d1d2da;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s;
+}
+
+.app {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  text-align: center;
+  letter-spacing: 0.5rem;
+}
+
+.input-container {
+  background: var(--fg);
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.input-container input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.todo-list {
+  background: var(--fg);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--text-muted);
+}
+
+.todo-item.completed span {
+  text-decoration: line-through;
+  color: var(--complete);
+}
+
+.todo-item input[type="checkbox"] {
+  margin-right: 1rem;
+}
+
+.todo-item button {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.todo-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.filters button {
+  margin: 0 0.25rem;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.filters button.active {
+  color: var(--accent);
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
